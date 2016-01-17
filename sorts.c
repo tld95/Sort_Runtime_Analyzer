@@ -33,7 +33,6 @@ void selection_sort(int* input, int input_size, int (*cmp)(const void *, const v
 		int temp = (*max);
 		*(input+max_index) = *(input+(i-1));
 		*(input+(i-1)) = temp; 
-		printf("%d\n",*(input+(i-1)));	
 	}
 }
 

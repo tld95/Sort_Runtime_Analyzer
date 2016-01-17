@@ -37,8 +37,3 @@ void selection_sort(int* input, int input_size, int (*cmp)(const void *, const v
 	}
 }
 
-/*
-void quick_sort(int input[], int input_size) {
-	qsort(input,input_size,sizeof(int),cmpfunc);
-}
-*/
