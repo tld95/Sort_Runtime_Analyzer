@@ -4,12 +4,12 @@
 
 #define MAX_LENGTH 100
 
-int read_data(int** data, int* count) {
-	FILE *input_data;
+int read_data(int** data, int* count, char* file_name) {
+	FILE *input_data; 
 	char line[MAX_LENGTH];
 	*data = (int *)malloc(sizeof(int));
 
-	input_data = fopen("data.txt","r");
+	input_data = fopen(file_name,"r");
 	
 	if (input_data == NULL) {
 		perror("Could not open data.txt.");
@@ -38,11 +38,11 @@ int read_data(int** data, int* count) {
 
 
 
-int write_data(int** data, int count) {
+int write_data(int** data, int count, char* file_name) {
 	int index = 0;
 	FILE *output_data = NULL;
 	
-	output_data = fopen("sorted.txt","w");
+	output_data = fopen(file_name,"w");
 
 
 	if (output_data == NULL) {
