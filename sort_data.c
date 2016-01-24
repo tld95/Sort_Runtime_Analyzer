@@ -17,7 +17,7 @@ int main() {
 
 	// Time Sort
 	begin = clock();	
-    	selection_sort(data, count, cmpfunc);
+    	insertion_sort(data, count, cmpfunc);
 	end = clock();
 	time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
 	printf("Sort Time for %d elements is %f seconds\n",count, time_spent);

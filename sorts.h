@@ -3,5 +3,6 @@
 
 void bubble_sort(int input[], int input_size, int (*cmp)(const void *, const void *));
 void selection_sort(int input[], int input_size, int (*cmp)(const void *, const void *));
+void insertion_sort(int input[], int input_size, int (*cmp)(const void *, const void *));
 
 #endif

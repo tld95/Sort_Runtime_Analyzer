@@ -36,3 +36,19 @@ void selection_sort(int* input, int input_size, int (*cmp)(const void *, const v
 	}
 }
 
+void insertion_sort(int* input, int input_size, int (*cmp)(const void *, const void *)) {	
+	for (int i = 1; i < input_size; i++) {
+		int *temp;
+		int val = input[i];
+		temp = &val;
+		int j = i - 1;
+		
+		while (j >= 0 && cmp((void *)(input+j),(void *)(temp)) > 0) {
+			*(input+j+1) = *(input+j);
+			j--;
+		}
+	
+		*(input+j+1) = *temp;
+	}
+}
+
